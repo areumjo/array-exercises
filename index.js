@@ -142,6 +142,22 @@ function countByFirstLetter (words) {
 
 function groupByFirstLetter (words) {
   // TODO: Add your solution here.
+  if (words == null) {
+	  return {};
+  } else if (typeof words == 'object') {
+	  var lowArr = words.map(element => element.toLowerCase());
+  	var tWords = words.map(element => element[0].toLowerCase());
+	  var newObj = {};
+    for (let i=0; i<lowArr.length; i++) {
+      if (newObj[tWords[i]]) {
+        newObj[tWords[i]].push(lowArr[i]);
+      } else {
+        newObj[tWords[i]] = lowArr[i].split();
+      }
+    } return newObj;
+  } else {
+	  return {};
+  }
 }
 
 /// ////// END OF CHALLENGE /////////
