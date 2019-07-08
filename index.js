@@ -83,7 +83,7 @@ function interleave (list1, list2) {
  */
 function makeRange (count, fillString) {
   // TODO: Add your solution here.
-  var newArr = [];
+    var newArr = [];
   for (let i=0; i<count; i++) {
 	  newArr.push(fillString);
   }
@@ -109,6 +109,16 @@ function makeRange (count, fillString) {
 
 function countByFirstLetter (words) {
   // TODO: Add your solution here.
+  var truncatedWords = words.map(element => element[0]);
+  var newObj = {};
+  for (let i=0; i<truncatedWords.length; i++) {
+	  if (newObj.hasOwnProperty(truncatedWords[i]) != true) {
+		  newObj[truncatedWords[i]]= 1;
+	  } else {
+		  newObj[truncatedWords[i]]= 2;
+	  }
+  }
+  return newObj;
 }
 
 /**
