@@ -12,7 +12,11 @@
     "start": "lite-server",
     "test": "mocha --reporter nyan --full-trace false './test'"
   },
-  "keywords": ["arrays", "exercises", "workout"],
+  "keywords": [
+    "arrays",
+    "exercises",
+    "workout"
+  ],
   "author": "Dan Levy",
   "license": "MIT",
   "dependencies": {

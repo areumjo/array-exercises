@@ -6,6 +6,11 @@
  */
 function sum (numbers) {
   // TODO: Add your solution here.
+  var total = 0;
+  numbers.forEach(element => {
+    total = total+element;
+  });
+  return total;
 }
 
 /**
@@ -15,6 +20,8 @@ function sum (numbers) {
  */
 function doubleNumbers (numbers) {
   // TODO: Add your solution here.
+  var array2 = numbers.slice();
+  return array2.map(element => element*2);
 }
 
 /**
