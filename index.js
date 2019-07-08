@@ -31,6 +31,12 @@ function doubleNumbers (numbers) {
  */
 function doubleCharacters (chars) {
   // TODO: Add your solution here.
+  var newArr = [];
+  for (let i=0; i<chars.length; i++) {
+    newArr.push(chars[i]);
+    newArr.push(chars[i]);
+  }
+  return newArr.join('');
 }
 
 /**
@@ -40,6 +46,15 @@ function doubleCharacters (chars) {
  */
 function backwardsify (array) {
   // TODO: Add your solution here.
+  if (Object.keys(array).length === 0) {
+	  return {};
+  } else {
+    var newArr = [];
+    for (let i=array.length-1; i>-1; i--) {
+      newArr.push(array[i]);
+	  }
+	  return newArr;
+  }
 }
 
 /**
@@ -49,6 +64,16 @@ function backwardsify (array) {
  */
 function interleave (list1, list2) {
   // TODO: Add your solution here.
+  if (list1.length != list2.length) {
+	  return null;
+  } else {
+	var newArr = [];
+	for (let i=0; i<list1.length; i++) {
+		newArr.push(list1[i]);
+		newArr.push(list2[i]);
+	}
+	return newArr;
+  }
 }
 
 /**
@@ -58,6 +83,11 @@ function interleave (list1, list2) {
  */
 function makeRange (count, fillString) {
   // TODO: Add your solution here.
+  var newArr = [];
+  for (let i=0; i<count; i++) {
+	  newArr.push(fillString);
+  }
+  return newArr;
 }
 
 /**
