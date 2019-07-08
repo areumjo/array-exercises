@@ -6,6 +6,11 @@
  */
 function sum (numbers) {
   // TODO: Add your solution here.
+  var total = 0;
+  numbers.forEach(element => {
+    total = total+element;
+  });
+  return total;
 }
 
 /**
@@ -15,6 +20,8 @@ function sum (numbers) {
  */
 function doubleNumbers (numbers) {
   // TODO: Add your solution here.
+  var array2 = numbers.slice();
+  return array2.map(element => element*2);
 }
 
 /**
@@ -24,6 +31,12 @@ function doubleNumbers (numbers) {
  */
 function doubleCharacters (chars) {
   // TODO: Add your solution here.
+  var newArr = [];
+  for (let i=0; i<chars.length; i++) {
+    newArr.push(chars[i]);
+    newArr.push(chars[i]);
+  }
+  return newArr.join('');
 }
 
 /**
@@ -33,6 +46,15 @@ function doubleCharacters (chars) {
  */
 function backwardsify (array) {
   // TODO: Add your solution here.
+  if (Object.keys(array).length === 0) {
+	  return {};
+  } else {
+    var newArr = [];
+    for (let i=array.length-1; i>-1; i--) {
+      newArr.push(array[i]);
+	  }
+	  return newArr;
+  }
 }
 
 /**
@@ -42,6 +64,16 @@ function backwardsify (array) {
  */
 function interleave (list1, list2) {
   // TODO: Add your solution here.
+  if (list1.length != list2.length) {
+	  return null;
+  } else {
+	var newArr = [];
+	for (let i=0; i<list1.length; i++) {
+		newArr.push(list1[i]);
+		newArr.push(list2[i]);
+	}
+	return newArr;
+  }
 }
 
 /**
@@ -51,6 +83,11 @@ function interleave (list1, list2) {
  */
 function makeRange (count, fillString) {
   // TODO: Add your solution here.
+    var newArr = [];
+  for (let i=0; i<count; i++) {
+	  newArr.push(fillString);
+  }
+  return newArr;
 }
 
 /**
@@ -72,6 +109,16 @@ function makeRange (count, fillString) {
 
 function countByFirstLetter (words) {
   // TODO: Add your solution here.
+  var truncatedWords = words.map(element => element[0]);
+  var newObj = {};
+  for (let i=0; i<truncatedWords.length; i++) {
+	  if (newObj.hasOwnProperty(truncatedWords[i]) != true) {
+		  newObj[truncatedWords[i]]= 1;
+	  } else {
+		  newObj[truncatedWords[i]]= 2;
+	  }
+  }
+  return newObj;
 }
 
 /**
@@ -95,6 +142,22 @@ function countByFirstLetter (words) {
 
 function groupByFirstLetter (words) {
   // TODO: Add your solution here.
+  if (words == null) {
+	  return {};
+  } else if (typeof words == 'object') {
+	  var lowArr = words.map(element => element.toLowerCase());
+  	var tWords = words.map(element => element[0].toLowerCase());
+	  var newObj = {};
+    for (let i=0; i<lowArr.length; i++) {
+      if (newObj[tWords[i]]) {
+        newObj[tWords[i]].push(lowArr[i]);
+      } else {
+        newObj[tWords[i]] = lowArr[i].split();
+      }
+    } return newObj;
+  } else {
+	  return {};
+  }
 }
 
 /// ////// END OF CHALLENGE /////////

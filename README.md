@@ -28,3 +28,7 @@ npm start
 Complete the functions in [`index.js`](./index.js) to meet the test criteria specified by [`test/index.test.js`](./test/index.test.js)
 
 Your browser will automatically refresh upon saved changes.
+
+
+#### Completed
+![](solved-screenshot.png)
